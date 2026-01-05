@@ -813,3 +813,20 @@ textarea.input{
     align-items: flex-start;
   }
 }
+
+/* =========================
+   PROJECT FLOAT BUTTON (HERO)
+========================= */
+.hero-card{
+  position: relative;
+}
+
+.project-float-link{
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 14px;
+  padding: 10px 14px;
+  z-index: 2;
+}
+
