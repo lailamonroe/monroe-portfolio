@@ -728,7 +728,6 @@ textarea.input{
   margin: 6px 0 12px 14px;
 }
 
-/* Mobile: stack it (no wrap) */
 @media (max-width: 700px){
   .mini-slider--float{
     float: none;
@@ -863,4 +862,195 @@ textarea.input{
 .btn:focus-visible{
   outline: 2px solid rgba(255,255,255,.55);
   outline-offset: 3px;
+}
+/* =========================
+   PROJECT 1 – DELIVERABLE SLIDERS
+========================= */
+
+.card.deliverable-block{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin-top: 18px;
+}
+
+.project-slider{
+  position: relative;
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;                
+  border: 1px solid var(--border);
+  background: rgba(18,22,34,.6);
+  box-shadow: var(--shadow);
+  line-height: 0;                  
+}
+
+/* slides */
+.project-slide{
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity .7s ease;
+  pointer-events: none;
+}
+
+.project-slide.active{
+  position: relative;              
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.project-slide img{
+  width: 100%;
+  height: auto;                   
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;                
+  background: transparent;
+}
+
+/* ===== Project slider caption: hover bottom-left pill ===== */
+
+.project-caption{
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+  transform: translateY(6px);
+}
+
+.project-slide:hover .project-caption{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-caption.left-pill{
+  position: absolute;
+  left: 16px;
+  right: auto;
+  bottom: 16px;
+
+  max-width: 42%;
+  padding: 12px 14px;
+
+  background: rgba(11,13,18,.62);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+
+  line-height: 1.25;
+  pointer-events: none; 
+}
+
+@media (max-width: 520px){
+  .project-caption.left-pill{
+    max-width: 85%;
+    left: 12px;
+    bottom: 12px;
+  }
+}
+
+.project-caption{
+  left: 16px;
+  right: auto;
+  bottom: 16px;
+  max-width: 48%;
+}
+
+.project-title{
+  font-weight: 800;
+  letter-spacing: .2px;
+  font-size: 16px;
+}
+
+.project-sub{
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.project-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(11,13,18,.45);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  line-height: 1;
+  font-size: 26px;
+  z-index: 3;
+}
+
+.project-arrow:hover{ background: rgba(11,13,18,.65); }
+.project-arrow.prev{ left: 14px; }
+.project-arrow.next{ right: 14px; }
+
+.project-dots{
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+}
+
+.project-dot{
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.24);
+  background: rgba(255,255,255,.12);
+  cursor: pointer;
+}
+
+.project-dot.active{
+  background: rgba(124,92,255,.9);
+  border-color: rgba(124,92,255,.9);
+}
+
+.deliverable-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 520px){
+  .project-caption{
+    left: 12px;
+    right: 12px;
+    bottom: 36px;
+  }
+}
+
+.project-slider.inline-lg{
+  max-width: 860px;            
+  margin: 18px auto 0;
+}
+
+.project-slider.inline-md{
+  max-width: 640px;           
+  margin: 18px auto 0;
+}
+
+.project-slider.inline-lg .project-caption,
+.project-slider.inline-md .project-caption{
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+}
+
+@media (max-width: 900px){
+  .project-slider.inline-lg{ max-width: 100%; }
+  .project-slider.inline-md{ max-width: 100%; }
 }
