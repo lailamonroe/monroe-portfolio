@@ -2,19 +2,21 @@
    1) THEME
 ========================= */
 :root{
-  --bg:#0b0d12;
-  --card:#121622;
-  --text:#eef1ff;
-  --muted:#aab2d5;
-  --accent:#7c5cff;
-  --border:rgba(255,255,255,.12);
+  --bg:#0b0d14;          
+  --card:#14172a;        
+  --text:#f2f1ff;       
+  --muted:#b7b1d8;       
+  --accent:#6b5aa8;     
+  --accent-pink:#c26aa7; 
+  --accent-orange:#d98b5f; 
+  --border:rgba(183,177,216,.18);
   --shadow: 0 18px 40px rgba(0,0,0,.45);
-
   --container: 1100px;
   --radius-sm: 14px;
   --radius-md: 20px;
   --radius-lg: 22px;
 }
+
 
 /* =========================
    2) BASE / RESET
@@ -148,7 +150,12 @@ img{ max-width:100%; display:block; border-radius:18px; }
   width:34px;
   height:34px;
   border-radius:12px;
-  background: linear-gradient(135deg, var(--accent), rgba(124,92,255,.35));
+
+  background-image: url("../img/about/IMG_5942.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   box-shadow: var(--shadow);
 }
 
@@ -204,7 +211,7 @@ img{ max-width:100%; display:block; border-radius:18px; }
 
 .btn.primary{
   border-color: rgba(124,92,255,.35);
-  background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(124,92,255,.55));
+  background: var(--accent);
 }
 .btn.primary:hover{ filter: brightness(1.05); }
 
@@ -313,6 +320,8 @@ a.card:hover{
   flex-wrap:wrap;
   gap:10px;
   margin-top:16px;
+  border-color: var(--accent-pink);
+  color: var(--accent-pink);
 }
 
 .pill{
@@ -1013,8 +1022,8 @@ textarea.input{
 }
 
 .project-dot.active{
-  background: rgba(124,92,255,.9);
-  border-color: rgba(124,92,255,.9);
+  background: rgba(223, 4, 139, 0.686);
+  border-color: rgba(94, 0, 39, 0.9);
 }
 
 .deliverable-head{
