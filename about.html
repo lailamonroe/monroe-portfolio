@@ -39,7 +39,7 @@
           <h1 style="margin-top:10px;">A little about me.</h1>
 
           <p class="lead">
-            I’m a curious, ambitious designer-in-progress with natural grit and a visual-first mindset—always pushing to
+            I’m a curious, ambitious designer with natural grit and a visual-first mindset. I am always pushing to
             learn more, grow faster, and become the best version of me for myself and the people around me.
           </p>
 
@@ -175,13 +175,13 @@
           <article class="card card--prose">
             <h3>Why I’m here</h3>
             <p>
-              After graduating high school, I packed my bags and moved solo to Milwaukee to start fresh. Fast forward to now:
+              After graduating high school, I packed my bags and moved solo to Milwaukee to start fresh. Fast forward to now,
               I’ve earned a full-time salaried role and I’m stepping into stability after graduating with my bachelor’s
               degree in May 2026.
             </p>
             <p>
               Still, I want more. I have people who depend on me, and I depend on myself to keep leveling up. The only limit
-              is yourself. Next up: moving beyond the Midwest and becoming part of the next design movement.
+              is yourself. Next up; moving beyond the Midwest and becoming part of the next design movement.
             </p>
           </article>
 
@@ -195,7 +195,7 @@
             <p>
               I’m a creative designer and problem-solver studying advertising and graphic design, with a growing focus on
               digital product, UX/UI, and visual storytelling. My work sits at the intersection of strategy, culture, and
-              craft—combining bold visuals with real-world thinking.
+              combining bold visuals with real-world thinking.
             </p>
             <p>
               Alongside school, I worked in digital product and business analysis at Northwestern Mutual, collaborating with
@@ -207,7 +207,7 @@
           <div class="card card--prose">
             <h3>What I Study</h3>
             <p>
-              I’m studying Journalism, Advertising, and Media Studies (JAMS) with a focus in Advertising at UW–Milwaukee.
+              I’m studying Journalism, Advertising, and Media Studies (JAMS) with a focus in Advertising at University of Wisconsin-Milwaukee.
               My coursework spans branding, campaign development, web design, UX/UI, and interactive media.
             </p>
           </div>
@@ -230,7 +230,7 @@
             </div>
             <p>
               I’m working toward a career in design and advertising focused on digital experiences, culture marketing, and
-              brand storytelling—work that’s visually strong, useful, and culturally relevant.
+              brand storytelling work that’s visually strong, useful, and culturally relevant.
             </p>
           </div>
 
@@ -270,7 +270,7 @@
       </a>
 
       <a class="social-link" href="https://github.com/lailamonroe" target="_blank" rel="noopener" aria-label="GitHub">
-        <!-- GitHub icon -->
+        
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.02c-3.2.7-3.88-1.37-3.88-1.37-.53-1.35-1.29-1.71-1.29-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.41-1.27.74-1.56-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.27 1.19-3.07-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.17a11.07 11.07 0 0 1 5.79 0c2.2-1.48 3.18-1.17 3.18-1.17.63 1.59.23 2.76.11 3.05.74.8 1.19 1.82 1.19 3.07 0 4.41-2.69 5.38-5.25 5.66.42.36.8 1.08.8 2.18v3.24c0 .31.21.67.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/>
         </svg>
@@ -301,7 +301,6 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 <!-- Life hero slider JS -->
 <script>
   (function(){
@@ -313,6 +312,7 @@
 
     let index = 0;
     let timer = null;
+    const SPEED = 8000; // ✅ change this to 6000, 8000, 10000, etc.
 
     function show(i){
       if (!slides.length) return;
@@ -329,7 +329,7 @@
     function start(){
       stop();
       if (slides.length <= 1) return;
-      timer = setInterval(() => show(index + 1), 3500);
+      timer = setInterval(() => show(index + 1), SPEED);
     }
 
     function stop(){
@@ -353,8 +353,8 @@
     if (nextBtn) nextBtn.addEventListener('click', () => { show(index + 1); start(); });
 
     if (slider){
-      slider.addEventListener('mouseenter', stop);
-      slider.addEventListener('mouseleave', start);
+      slider.addEventListener('mouseenter', stop);   // ✅ pauses on hover
+      slider.addEventListener('mouseleave', start);  // ✅ resumes after hover
     }
 
     if (slides.length){
@@ -363,6 +363,7 @@
     }
   })();
 </script>
+
 
 <!-- Mini slider JS -->
 <script>
